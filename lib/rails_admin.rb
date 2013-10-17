@@ -32,3 +32,5 @@ module RailsAdmin
     end
   end
 end
+
+require 'bootstrap-sass'
