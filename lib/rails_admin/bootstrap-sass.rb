@@ -1,13 +1,13 @@
-module Bootstrap
+module RailsAdmin::Bootstrap
   class FrameworkNotFound < StandardError; end
 
   # Inspired by Kaminari
   def self.load!
     if compass?
-      require 'bootstrap-sass/compass_functions'
+      require 'rails_admin/bootstrap-sass/compass_functions'
       register_compass_extension
     elsif asset_pipeline?
-      require 'bootstrap-sass/sass_functions'
+      require 'rails_admin/bootstrap-sass/sass_functions'
     end
 
     if rails?
@@ -43,4 +43,4 @@ module Bootstrap
   end
 end
 
-Bootstrap.load!
+RailsAdmin::Bootstrap.load!
